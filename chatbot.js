@@ -28,31 +28,3 @@ const postCompletion = async (messages) => {
 };
 
 module.exports = { postCompletion };
-
-
-/* const chatLoop = async () => {
-  while (true) {
-    const completion = await postCompletion(history);
-
-    if (completion && completion.choices && completion.choices[0] && completion.choices[0].delta && completion.choices[0].delta.content) {
-      console.log(completion.choices[0].delta.content);
-      history.push({ "role": "assistant", "content": completion.choices[0].delta.content });
-    } else {
-      console.log("No response or error in completion");
-    }
-
-    // To capture user input in Node.js, you might use readline or another npm package for asynchronous input.
-    const readline = require('readline').createInterface({
-      input: process.stdin,
-      output: process.stdout
-    });
-
-    readline.question('> ', (input) => {
-      history.push({ "role": "user", "content": input });
-      readline.close();
-      chatLoop(); // Call recursively to continue the loop
-    });
-  }
-};
-
-*/
