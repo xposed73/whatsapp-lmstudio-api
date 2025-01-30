@@ -1,4 +1,4 @@
-# Usage
+# WhatsApp LM Studio API - Auto Reply
 
 ## Clone the project
 ```shell
